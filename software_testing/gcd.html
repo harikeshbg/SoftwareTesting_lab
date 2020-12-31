@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>GCD Calculator</h1>
+    <input type="number" id="num1">
+    <br><br>
+    <input type="number" id="num2">
+    <br><br>
+    <button onclick="displayGCD()">Submit</button>
+    <!-- <input type="reset" value="Reset"> -->
+    <button onclick="document.getElementById('num1').value = '',document.getElementById('num2').value = '',document.getElementById('demo') = ''">Clear</button>
+
+    <p id="demo"></p>
+    <script>
+        function displayGCD()
+        {
+            var y=document.getElementById("num1").value;
+            var x=document.getElementById("num2").value;
+            var t;
+            if(x>y)
+            {
+                t=y;
+                y=x;
+                x=t;
+            }
+            while(y) 
+            {
+                t = y;
+                y = x % y;
+                x = t; 
+            }
+        document.getElementById("demo").innerHTML=("GCD is "+x);
+        }
+    </script>
+</body>
+</html>
