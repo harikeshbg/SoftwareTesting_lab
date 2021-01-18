@@ -1,0 +1,41 @@
+<html>
+<head>
+    <script type="text/javascript">
+    var x,y,r;
+    function gcd()
+    {
+        x=parseInt(document.myform.n1.value);
+        y=parseInt(document.myform.n2.value);
+        if(isNaN(x)||isNaN(y)||x==" "||y==" "||x<1||y<1)
+            {alert("enter valid input")
+            return;}
+        else{
+            while(y)
+            {
+                r=y;
+                y=x%y;
+                x=r;
+            }
+        }
+        document.myform.result.value=x;
+    }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        <h1 align="center">GCD calculation</h1>
+        <hr color="Green">
+        <center>
+            Enter 2 numbers<br><br>
+            Number1:<input type="text" name="n1" value="">
+            <br><br>
+            Number2:<input type="text" name="n2" value="">
+            <br><br>
+            <input type="button" value="GCD" onclick="gcd()">
+            <input type="reset" value="clear">
+            <br><br>
+            GCD is:<input type="text" name="result" value="">
+        </center>
+    </form>
+</body>
+</html>
