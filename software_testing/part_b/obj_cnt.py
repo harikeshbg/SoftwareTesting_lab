@@ -2,7 +2,7 @@ import os
 Fcount = 0
 Folcount=0
 tif_c=pdf_c=jpg_c=txt_c=ppt_c=oth_c=cpp_c=c_c=py_c=xl_c=html_c=0
-d = "C:\\Users\\ADMIN\\Desktop\\harikesh_1si17is012\\part_b\\"
+d = "/home/harikesh/Documents/Lab_programs/SoftwareTesting_lab/software_testing/part_b"
 for path,dirs,files in os.walk(d):
     for filename in files:
         print(os.path.join(path,filename))

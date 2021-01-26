@@ -1,5 +1,5 @@
 import pandas as pd
-excel_file='C:\\Users\\ADMIN\\Desktop\\harikesh_1si17is012\\part_b\\licenses.xlsx'
+excel_file='/home/harikesh/Documents/Lab_programs/SoftwareTesting_lab/software_testing/part_b/licenses.xlsx'
 j=1
 records = pd.read_excel(excel_file)
 key=input("Enter the license key u want to search:")
